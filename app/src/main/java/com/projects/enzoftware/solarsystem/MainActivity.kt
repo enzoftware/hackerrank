@@ -15,15 +15,15 @@ import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
-   // val orbitsConstraint : ConstraintSet = ConstraintSet()
-    // val detailsConstraint : ConstraintSet = ConstraintSet()
+    val orbitsConstraint : ConstraintSet = ConstraintSet()
+    val detailsConstraint : ConstraintSet = ConstraintSet()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // orbitsConstraint.clone(root)
-       // detailsConstraint.clone(this,R.layout.detail_activity)
+        //orbitsConstraint.clone(rut)
+        //detailsConstraint.clone(this,R.layout.detail_activity)
 
         val earthAnimate: ValueAnimator = animatePlanet(earth,TimeUnit.SECONDS.toMillis(2))
         val marsAnimate : ValueAnimator = animatePlanet(mars,TimeUnit.SECONDS.toMillis(6))
@@ -34,11 +34,15 @@ class MainActivity : AppCompatActivity() {
         saturnAnimate.start()
 
         sun.setOnClickListener {
-            earthAnimate.cancel()
-            marsAnimate.cancel()
-            saturnAnimate.cancel()
-           // TransitionManager.beginDelayedTransition(root)
+            //earthAnimate.cancel()
+            //marsAnimate.cancel()
+            //saturnAnimate.cancel()
+            // TransitionManager.beginDelayedTransition(root)
             // detailsConstraint.applyTo(root)
+
+            /**
+             * Help meeeee :'v
+             **/
         }
 
 
