@@ -5,12 +5,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
 import android.support.constraint.ConstraintSet
-import android.transition.TransitionManager
-import android.view.View
 import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.detail_activity.*
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
