@@ -4,16 +4,26 @@ import android.animation.ValueAnimator
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
+import android.support.constraint.ConstraintSet
+import android.transition.TransitionManager
+import android.view.View
 import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.detail_activity.*
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
+   // val orbitsConstraint : ConstraintSet = ConstraintSet()
+    // val detailsConstraint : ConstraintSet = ConstraintSet()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // orbitsConstraint.clone(root)
+       // detailsConstraint.clone(this,R.layout.detail_activity)
 
         val earthAnimate: ValueAnimator = animatePlanet(earth,TimeUnit.SECONDS.toMillis(2))
         val marsAnimate : ValueAnimator = animatePlanet(mars,TimeUnit.SECONDS.toMillis(6))
@@ -22,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         earthAnimate.start()
         marsAnimate.start()
         saturnAnimate.start()
+
+        sun.setOnClickListener {
+            earthAnimate.cancel()
+            marsAnimate.cancel()
+            saturnAnimate.cancel()
+           // TransitionManager.beginDelayedTransition(root)
+            // detailsConstraint.applyTo(root)
+        }
 
 
     }
