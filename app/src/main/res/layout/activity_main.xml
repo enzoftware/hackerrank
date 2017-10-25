@@ -4,15 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="com.projects.enzoftware.solarsystem.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/sun"
+        android:src="@drawable/sun"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/earth"
+        android:src="@drawable/earth"
+        app:layout_constraintCircle="@+id/sun"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="90dp" />
+
+    <ImageView
+        android:id="@+id/mars"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/mars"
+        app:layout_constraintCircle="@+id/sun"
+        app:layout_constraintCircleAngle="110"
+        app:layout_constraintCircleRadius="130dp" />
+
+    <ImageView
+        android:id="@+id/saturn"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@drawable/saturn"
+        app:layout_constraintCircle="@+id/sun"
+        app:layout_constraintCircleAngle="235"
+        app:layout_constraintCircleRadius="180dp" />
 
 </android.support.constraint.ConstraintLayout>
