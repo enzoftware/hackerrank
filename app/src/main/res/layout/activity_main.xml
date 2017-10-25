@@ -3,9 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/root"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@drawable/back"
     tools:context="com.projects.enzoftware.solarsystem.MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="130dp" />
 
     <ImageView
         android:layout_width="150dp"
@@ -17,6 +25,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <TextView
+        android:id="@+id/sun_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lorum_short"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/sun" />
+
     <ImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -25,6 +42,16 @@
         app:layout_constraintCircle="@+id/sun"
         app:layout_constraintCircleAngle="45"
         app:layout_constraintCircleRadius="90dp" />
+
+
+    <TextView
+        android:id="@+id/earth_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lorum_short"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/earth" />
 
     <ImageView
         android:id="@+id/mars"
@@ -35,6 +62,16 @@
         app:layout_constraintCircleAngle="110"
         app:layout_constraintCircleRadius="130dp" />
 
+
+    <TextView
+        android:id="@+id/mars_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lorum_short"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/mars" />
+
     <ImageView
         android:id="@+id/saturn"
         android:layout_width="100dp"
@@ -43,5 +80,15 @@
         app:layout_constraintCircle="@+id/sun"
         app:layout_constraintCircleAngle="235"
         app:layout_constraintCircleRadius="180dp" />
+
+    <TextView
+        android:id="@+id/saturn_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lorum_short"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/saturn" />
+
 
 </android.support.constraint.ConstraintLayout>
